@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BMI Kalkulátor</title>
+    <link rel="stylesheet" th:href="@{/css/dash.css}">
+</head>
+<body>
+<div class="header">
+    <div class="header-info">
+        <div class="info-line">Konzulens: Fazekas Levente</div>
+        <div class="info-line">Készítette: Kiss Viktor - BSW6DS</div>
+    </div>
+    <div class="header-title">BMI Kalkulátor</div>
+</div>
+
+<div class="container">
+    <div class="welcome-message">Bejelentkezett felhasználó: <span th:text="${username}"></span></div>
+
+    <div class="bmi-input">
+        <form th:action="@{/calculate-bmi}" th:object="${bmiRecord}" method="post">
+            <div class="form-group">
+                <label>Magasság (cm): </label>
+                <input type="number" th:field="*{height}" required/>
+            </div>
+            <div class="form-group">
+                <label>Súly (kg): </label>
+                <input type="number" th:field="*{weight}" required/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="BMI Számítás"/>
+            </div>
+        </form>
+    </div>
+
+    <div class="history-section">
+        <h2>Előzmények</h2>
+        <table class="history-table">
+            <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Magasság (cm)</th>
+                <th>Súly (kg)</th>
+                <th>BMI Érték</th>
+                <th>Testalkat kategória</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="record : ${bmiHistory}">
+                <td th:text="${#temporals.format(record.recordDate, 'yyyy-MM-dd HH:mm')}"></td>
+                <td th:text="${record.height}"></td>
+                <td th:text="${record.weight}"></td>
+                <td th:text="${#numbers.formatDecimal(record.bmiValue, 1, 2)}"></td>
+                <td th:text="${record.category}" th:data-category="${record.category}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="button-section">
+        <form th:action="@{/logout}" method="post" class="action-form">
+            <input type="submit" value="Kijelentkezés" class="logout-button"/>
+        </form>
+        <a th:href="@{/login}" class="switch-user-button">Felhasználó váltás</a>
+    </div>
+</div>
+</body>
+</html>

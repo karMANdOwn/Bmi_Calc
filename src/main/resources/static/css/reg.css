@@ -1,0 +1,106 @@
+body {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('./images/alma.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.header {
+    font-family: "Comic Sans MS", sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-info {
+    text-align: left;
+    font-size: 1.05em;
+    color:black;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.info-line {
+    margin: 2px 0;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 3em;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    color: #45a049;
+}

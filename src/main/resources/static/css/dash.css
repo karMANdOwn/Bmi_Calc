@@ -1,0 +1,209 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('./images/alma.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    font-family: "Comic Sans MS", sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header-info {
+    text-align: left;
+    font-size: 1.05em;
+    color:black;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.info-line {
+    margin: 2px 0;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 3em;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+.welcome-message {
+    font-size: 20px;
+    color: #00008B;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.bmi-input {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 200px;
+    align-self: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.history-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-form {
+    margin: 0;
+}
+
+.logout-button {
+    background-color: #ff4444 !important;
+    margin: 0;
+}
+
+.logout-button:hover {
+    background-color: #cc0000 !important;
+}
+
+.switch-user-button {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 200px;
+    text-align: center;
+}
+
+.switch-user-button:hover {
+    background-color: #1976D2;
+}
+
+.history-table td[data-category="Nincs Adat (N/A)"] {
+    color: #8800ff;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Soványság (alultápláltság)"] {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Normál testsúly"] {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Túlsúly"] {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Elhízás (I. fokozat)"] {
+    color: #F57C00;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Elhízás (II. fokozat)"] {
+    color: #E64A19;
+    font-weight: bold;
+}
+
+.history-table td[data-category="Súlyos elhízás (III. fokozat)"] {
+    color: #B71C1C;
+    font-weight: bold;
+}

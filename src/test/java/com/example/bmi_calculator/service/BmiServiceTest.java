@@ -43,7 +43,7 @@ class BmiServiceTest {
 
     @Test
     void getUserBmiHistory_ShouldReturnUserRecords() {
-        // Given
+
         User user = new User();
         BmiRecord record1 = new BmiRecord();
         BmiRecord record2 = new BmiRecord();
@@ -51,10 +51,10 @@ class BmiServiceTest {
         
         when(bmiRecordRepository.findByUserOrderByRecordDateDesc(user)).thenReturn(records);
 
-        // When
+
         List<BmiRecord> result = bmiService.getUserBmiHistory(user);
 
-        // Then
+
         assertThat(result).hasSize(2);
         assertThat(result).containsExactly(record1, record2);
     }
